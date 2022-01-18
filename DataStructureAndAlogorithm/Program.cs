@@ -11,11 +11,31 @@ Arrays arrays = new Arrays();
 
 var output = arrays.ArrayMethod(array1.ToArray());
 Console.WriteLine("Array Results are as follow");
-
 Console.WriteLine(string.Join(", ", output));
 
-Console.ReadKey();
+foreach (var el in array1)
+{
+    Console.WriteLine($" {el} ");
+}
 
+for (int i = 0; i < array1.Length; i++)
+{
+    Console.WriteLine($" {array1[i]} ");
+}
+
+    Console.WriteLine("MultiDimArray starts here");
+    int[,] mArray = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6 } };
+
+    for (int i = 0; i < mArray.GetLength(0); i++)
+    {
+        for (int j = 1; j < mArray.GetLength(1); j++)
+        {
+            Console.WriteLine(mArray[i,j]);
+        }
+    }
+
+    Console.WriteLine("MultiDimArray ends here");
+Console.ReadKey();
 
 
 public class Arrays
